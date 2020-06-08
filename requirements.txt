@@ -1,0 +1,6 @@
+autopep8==1.5.3
+pep8==1.7.1
+pycodestyle==2.6.0
+pysolar==0.8
+pytz==2020.1
+toml==0.10.1
