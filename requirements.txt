@@ -1,5 +1,7 @@
 autopep8==1.5.3
 pep8==1.7.1
+pifacecommon==4.2.2
+pifacedigitalio==3.0.5
 pycodestyle==2.6.0
 pysolar==0.8
 pytz==2020.1
