@@ -24,7 +24,7 @@ def get_data(lat, lon, date_):
 def log_data(data_, log_file):
     path_ = os.path.join('..', 'logs', log_file)
     with open(path_, 'a') as f:
-        f.write(f'{data_.['altitude']},{data_.['azimuth']},{data_.['timestamp']}\n')
+        f.write(f"{data_['altitude']},{data_['azimuth']},{data_['timestamp']}\n")
 
 
 if __name__ == '__main__':
