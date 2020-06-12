@@ -141,3 +141,4 @@ dmypy.json
 
 # Other
 src/params.json
+logs/*
