@@ -1,4 +1,7 @@
 autopep8==1.5.3
+colorzero==1.1
+gpiozero==1.5.1
+keyboard==0.13.5
 pep8==1.7.1
 pifacecommon==4.2.2
 pifacedigitalio==3.0.5
