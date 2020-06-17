@@ -13,8 +13,16 @@ class Viewer(cmd.Cmd):
 
     def start_board(self):
         self.board = pfio.PiFaceDigital()
+        print("Board ready.\n")
 
     def do_read_pins(self, p_type=0):
+        """
+        Prints the pin values to the console.
+
+        Arguments
+        p_type: the type of pin to read -> 0=BOTH | 1=IN | 2=OUT (default is 0)
+        """
+
         labels = {0: "OFF", 1: "ON"}
 
         if p_type == 0:
@@ -45,10 +53,18 @@ class Viewer(cmd.Cmd):
         print("\n")
 
     def do_set_port(self, value=None, port="input"):
+        """
+        Set the value of the I/O ports.
+
+        Arguments
+        value: hex value to be read (eg. [0x]FF) - has to be in range 0..FF
+        port: the port type - input | output
+        """
+
         ports = {"input": self.board.input_port, "output": self.board.output_port}
         if value:
             if type(value) == str:
-                int_val = int(str, 16)
+                int_val = int(value, 16)
                 if int_val > 255 and int_val < 0:
                     print("Invalid setting")
                     return
